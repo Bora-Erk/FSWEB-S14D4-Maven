@@ -22,12 +22,8 @@ public abstract class Monster {
     public double getDamage() {
         return damage;
     }
-    public abstract double bleed();
-    public abstract double poison();
 
-    public double attack() {
-        return getDamage() + bleed() + poison();
-    }
+    public abstract double attack();
 
 
 }

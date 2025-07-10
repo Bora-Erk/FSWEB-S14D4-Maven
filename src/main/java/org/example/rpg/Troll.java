@@ -1,6 +1,6 @@
 package org.example.rpg;
 
-public class Troll extends Monster{
+public class Troll extends Monster implements Bleedable, Poisonable{
     public Troll(String name, int hitPoints, double damage) {
         super(name, hitPoints, damage);
     }
@@ -14,4 +14,9 @@ public class Troll extends Monster{
     public double poison() {
         return getDamage() * 0.3;
     }
+    @Override
+    public double attack() {
+        return getDamage() + bleed() + poison();
+    }
+
 }
